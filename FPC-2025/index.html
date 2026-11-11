@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101923">
+<title>FPC 2025 | Fútbol Colombiano</title>
+<link rel="stylesheet" href="styles.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<header class="topbar">
+  <a class="brand" href="#">
+    <span class="brand-icon">⚽</span>
+    <span>FPC <b>2025</b><small>LIGA BETPLAY</small></span>
+  </a>
+  <nav>
+    <a href="#posiciones">Posiciones</a>
+    <a href="#cuadrangulares">Cuadrangulares</a>
+    <a href="#finales">Finales</a>
+    <a href="#estadisticas">Estadísticas</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero-content">
+      <span class="eyebrow">FÚTBOL PROFESIONAL COLOMBIANO</span>
+      <h1>La temporada que hizo historia.</h1>
+      <p>Revive los dos campeonatos de la Liga BetPlay 2025.</p>
+      <a class="hero-button" href="#posiciones">Explorar temporada ↓</a>
+    </div>
+    <div class="hero-ball">⚽</div>
+  </section>
+
+  <section class="winner-grid">
+    <article class="winner-card">
+      <span>CAMPEÓN APERTURA</span>
+      <div class="winner-icon">🏆</div>
+      <h2>Santa Fe</h2>
+      <p>Independiente Santa Fe · 2025-I</p>
+    </article>
+    <article class="winner-card second">
+      <span>CAMPEÓN CLAUSURA</span>
+      <div class="winner-icon">🏆</div>
+      <h2>Junior</h2>
+      <p>Junior de Barranquilla · 2025-II</p>
+    </article>
+  </section>
+
+  <section class="section" id="posiciones">
+    <div class="section-title">
+      <div>
+        <span class="eyebrow">FASE REGULAR</span>
+        <h2>Tabla de posiciones</h2>
+        <p>Clasificación de los equipos del torneo.</p>
+      </div>
+      <select id="season">
+        <option value="I">Liga BetPlay 2025-I</option>
+        <option value="II">Liga BetPlay 2025-II</option>
+      </select>
+    </div>
+
+    <div class="toolbar">
+      <input id="teamSearch" type="search" placeholder="Buscar equipo...">
+      <button id="csvButton" class="button secondary">↓ Descargar CSV</button>
+    </div>
+
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>POS</th><th>EQUIPO</th><th>PJ</th>
+            <th>PTS</th><th>ESTADO</th>
+          </tr>
+        </thead>
+        <tbody id="standings"></tbody>
+      </table>
+    </div>
+    <p class="footnote" id="standingsNote"></p>
+    <div class="legend">🟢 Clasificado a cuadrangulares</div>
+  </section>
+
+  <section class="section" id="cuadrangulares">
+    <div class="section-title">
+      <div>
+        <span class="eyebrow">FASE FINAL</span>
+        <h2>Cuadrangulares semifinales</h2>
+        <p>Los grupos de cada semestre.</p>
+      </div>
+    </div>
+
+    <div class="group-grid">
+      <article class="group-card">
+        <h3>GRUPO A</h3>
+        <div id="groupA"></div>
+        <div class="group-winner" id="winnerA"></div>
+      </article>
+      <article class="group-card">
+        <h3>GRUPO B</h3>
+        <div id="groupB"></div>
+        <div class="group-winner" id="winnerB"></div>
+      </article>
+    </div>
+    <p class="footnote" id="groupsNote"></p>
+  </section>
+
+  <section class="section" id="finales">
+    <span class="eyebrow">LA GRAN FINAL</span>
+    <h2>Los campeones de 2025</h2>
+    <div class="final-grid" id="finalCards"></div>
+  </section>
+
+  <section class="section" id="estadisticas">
+    <div class="section-title">
+      <div>
+        <span class="eyebrow">RENDIMIENTO INDIVIDUAL</span>
+        <h2>Estadísticas del torneo</h2>
+        <p>Los protagonistas de cada semestre.</p>
+      </div>
+    </div>
+    <div class="stats-grid" id="scorerCards"></div>
+    <article class="chart-card">
+      <h3>Máximos goleadores</h3>
+      <canvas id="goalsChart"></canvas>
+    </article>
+    <p class="footnote" id="statsNote"></p>
+  </section>
+
+  <section class="section sources">
+    <h2>Fuentes y créditos</h2>
+    <p>Proyecto independiente de consulta histórica. No es un producto oficial de DIMAYOR.</p>
+    <ul>
+      <li><a href="https://dimayor.com.co/" target="_blank" rel="noopener">DIMAYOR</a></li>
+      <li><a href="https://colombia.as.com/" target="_blank" rel="noopener">AS Colombia</a></li>
+      <li><a href="https://www.winsports.co/" target="_blank" rel="noopener">Win Sports</a></li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  <b>FPC 2025</b> · Proyecto educativo independiente · Colombia 🇨🇴
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

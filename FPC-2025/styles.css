@@ -1,0 +1,354 @@
+
+:root {
+  --bg:#0b111b;
+  --panel:#141f2e;
+  --panel2:#1c2b3d;
+  --border:#2b3b4e;
+  --text:#f3f6fa;
+  --muted:#9baabc;
+  --gold:#e7bd56;
+  --green:#36c58a;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:Inter,Arial,sans-serif;
+}
+
+a{color:inherit;text-decoration:none}
+
+.topbar{
+  min-height:76px;
+  padding:14px 6%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+  background:#111c29;
+  border-bottom:1px solid var(--border);
+  position:sticky;
+  top:0;
+  z-index:10;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  font-size:22px;
+  font-weight:900;
+}
+
+.brand-icon{font-size:32px}
+
+.brand small{
+  display:block;
+  color:var(--muted);
+  font-size:9px;
+  letter-spacing:2px;
+}
+
+.topbar nav{
+  display:flex;
+  gap:22px;
+  color:#bac5d2;
+  font-size:13px;
+}
+
+.topbar nav a:hover{color:var(--gold)}
+
+main{
+  max-width:1200px;
+  margin:auto;
+  padding:30px 22px;
+}
+
+.hero{
+  min-height:310px;
+  padding:45px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  border-radius:22px;
+  overflow:hidden;
+  background:radial-gradient(circle at 85% 50%,#335044,#162c32 45%,#152235);
+}
+
+.hero-content{position:relative;z-index:1}
+
+.eyebrow{
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:2px;
+  color:var(--gold);
+}
+
+.hero h1{
+  font-size:clamp(35px,5vw,57px);
+  max-width:650px;
+  line-height:1.05;
+  margin:18px 0;
+}
+
+.hero p{color:#bdc9d5}
+
+.hero-ball{
+  font-size:130px;
+  filter:drop-shadow(0 12px 20px #0008);
+}
+
+.hero-button,.button{
+  display:inline-block;
+  padding:13px 19px;
+  border:0;
+  border-radius:9px;
+  background:var(--gold);
+  color:#15202b;
+  font-weight:800;
+  font-size:13px;
+  cursor:pointer;
+  margin-top:15px;
+}
+
+.winner-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+  margin:22px 0;
+}
+
+.winner-card{
+  padding:23px;
+  background:linear-gradient(130deg,#41371e,#1c2935);
+  border:1px solid #74602d;
+  border-radius:15px;
+}
+
+.winner-card.second{
+  background:linear-gradient(130deg,#41301b,#1c2935);
+}
+
+.winner-card>span{
+  font-size:10px;
+  letter-spacing:2px;
+  color:var(--gold);
+}
+
+.winner-icon{font-size:30px;margin-top:15px}
+.winner-card h2{font-size:27px;margin:5px 0}
+.winner-card p{color:var(--muted);font-size:12px}
+
+.section{
+  margin:25px 0;
+  padding:26px;
+  background:var(--panel);
+  border:1px solid var(--border);
+  border-radius:16px;
+  scroll-margin-top:95px;
+}
+
+.section h2{font-size:26px;margin:9px 0}
+
+.section-title{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:15px;
+  flex-wrap:wrap;
+}
+
+.section-title p{
+  font-size:13px;
+  color:var(--muted);
+}
+
+select,input{
+  background:var(--panel2);
+  border:1px solid var(--border);
+  color:var(--text);
+  padding:12px;
+  border-radius:9px;
+}
+
+.toolbar{
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  margin:22px 0;
+  flex-wrap:wrap;
+}
+
+.toolbar input{width:min(330px,100%)}
+
+.button.secondary{
+  margin:0;
+  background:var(--panel2);
+  color:var(--text);
+  border:1px solid var(--border);
+}
+
+.table-scroll{overflow-x:auto}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  min-width:480px;
+}
+
+th,td{
+  padding:15px 12px;
+  text-align:left;
+  border-bottom:1px solid var(--border);
+  font-size:13px;
+}
+
+th{
+  color:var(--muted);
+  font-size:10px;
+  letter-spacing:1px;
+}
+
+td:first-child{color:var(--gold);font-weight:900}
+tr:hover{background:#1d3040}
+
+.team-cell{font-weight:800}
+
+.team-logo{
+  width:31px;
+  height:31px;
+  border-radius:50%;
+  display:inline-grid;
+  place-items:center;
+  background:#34475c;
+  color:white;
+  margin-right:9px;
+  font-size:10px;
+  vertical-align:middle;
+}
+
+.status{color:var(--green);font-size:10px;font-weight:bold}
+
+.footnote{
+  color:var(--muted);
+  font-size:11px;
+  line-height:1.7;
+  margin-top:16px;
+}
+
+.legend{font-size:11px;color:var(--muted);margin-top:14px}
+
+.group-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:15px;
+  margin-top:20px;
+}
+
+.group-card,.chart-card{
+  background:var(--panel2);
+  padding:20px;
+  border-radius:13px;
+  border:1px solid var(--border);
+}
+
+.group-card h3{
+  font-size:12px;
+  letter-spacing:2px;
+  color:var(--gold);
+}
+
+.group-team{
+  padding:13px 0;
+  border-bottom:1px solid var(--border);
+  font-size:13px;
+}
+
+.group-team:last-child{border:0}
+
+.group-winner{
+  margin-top:15px;
+  color:var(--green);
+  font-size:12px;
+  font-weight:bold;
+}
+
+.final-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:15px;
+  margin-top:20px;
+}
+
+.final-card{
+  background:var(--panel2);
+  padding:23px;
+  border-radius:13px;
+  text-align:center;
+}
+
+.final-card .cup{font-size:43px}
+.final-card h3{color:var(--gold);font-size:22px}
+.final-score{font-size:28px;font-weight:900;margin:14px}
+.final-card p{color:var(--muted);font-size:12px}
+
+.stats-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:13px;
+  margin:20px 0;
+}
+
+.stat-card{
+  background:var(--panel2);
+  padding:19px;
+  border-radius:12px;
+}
+
+.stat-card small{color:var(--muted);font-size:11px}
+.stat-card h3{font-size:21px;margin:10px 0}
+.stat-card strong{color:var(--gold);font-size:25px}
+
+.chart-card{margin-top:20px}
+.chart-card canvas{max-height:310px}
+
+.sources a{
+  color:var(--gold);
+  text-decoration:underline;
+}
+
+.sources li{margin:9px 0}
+
+footer{
+  text-align:center;
+  padding:30px;
+  color:var(--muted);
+  font-size:12px;
+}
+
+@media(max-width:720px){
+  .topbar{
+    align-items:flex-start;
+    flex-direction:column;
+  }
+  .topbar nav{
+    width:100%;
+    overflow-x:auto;
+    gap:17px;
+    padding:7px 0;
+  }
+  .hero{padding:28px;min-height:260px}
+  .hero-ball{font-size:65px}
+  .winner-grid,.group-grid,.final-grid{grid-template-columns:1fr}
+  .stats-grid{grid-template-columns:1fr 1fr}
+  .section{padding:18px}
+}
+
+@media(max-width:420px){
+  .stats-grid{grid-template-columns:1fr}
+  .hero-ball{display:none}
+}
